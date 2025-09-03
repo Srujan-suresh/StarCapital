@@ -78,7 +78,7 @@
 										<li><a href="car.html">Car Loan</a></li>
 										<li><a href="perosnalloan.html">Personal Loan</a></li>
 										<li><a href="business.html">Business Loan</a></li>
-										<li><a href="commercialloan.html">Commercial Loan</a></li>
+										<li><a href="commercialloan.html">Commercial Vehicle Loan</a></li>
 										<li><a href="creditcard.html">Credit Card</a></li>
 										<li><a href="carinsur.html">Car Insurance</a></li>
 										<li><a href="healthinsur.html">Health Insurance</a></li>
@@ -185,7 +185,7 @@
 										<li><a href="car.html">Car Loan</a></li>
 										<li><a href="perosnalloan.html">Personal Loan</a></li>
 										<li><a href="business.html">Business Loan</a></li>
-										<li><a href="commercialloan.html">Commercial Loan</a></li>
+										<li><a href="commercialloan.html">Commercial Vehicle Loan</a></li>
 										<li><a href="creditcard.html">Credit Card</a></li>
 										<li><a href="carinsur.html">Car Insurance</a></li>
 										<li><a href="healthinsur.html">Health Insurance</a></li>
@@ -474,11 +474,11 @@ Protect Your<br />Ride with<br />Car Coverage                    </rs-layer>
 }
 </style>
 
-    <!-- 🧾 Loan Form (positioned to the right) -->
-    <div class="slider-form-overlay">
+  <!-- 🚗 Car Insurance Form (Positioned to the right) -->
+<div class="slider-form-overlay">
     <div class="sv-card sv-form-card">
         <h3>Apply for Car Insurance</h3>
-        <form id="home-loan-form">
+        <form id="car-insurance-form">
             <!-- Full Name -->
             <div class="form-group">
                 <input type="text" name="full_name" class="form-control" placeholder="Full Name" required>
@@ -494,48 +494,49 @@ Protect Your<br />Ride with<br />Car Coverage                    </rs-layer>
                 <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
             </div>
 
-            <!-- Loan Amount (number) -->
+            <!-- Car Make -->
             <div class="form-group">
-                <input type="number" name="loan_amount_number" class="form-control" id="loanAmountNumber" placeholder="Loan Amount (in numbers)" required>
+                <input type="text" name="car_make" class="form-control" placeholder="Car Name (e.g., Toyota)" required>
             </div>
 
-            <!-- Loan Amount (words) -->
+            <!-- Car Model -->
             <div class="form-group">
-                <input type="text" name="loan_amount_words" class="form-control" id="loanAmountWords" placeholder="Loan Amount (in words)" readonly required>
+                <input type="text" name="car_model" class="form-control" placeholder="Car Model (e.g., Corolla)" required>
             </div>
 
-            <!-- Area -->
+            <!-- Year of Manufacture -->
             <div class="form-group">
-                <input type="text" name="area" class="form-control" placeholder="Location" required>
+                <input type="number" name="manufacture_year" class="form-control" placeholder="Year of Manufacture (e.g., 2021)" min="1990" max="2025" required>
             </div>
 
-            <!-- Loan Type -->
+            <!-- Vehicle Registration Number -->
             <div class="form-group">
-                <select class="form-select" name="loan_type" id="loan_type_select" required>
-                    <option value="">-- Select Loan Type --</option>
-                    <option value="mortgage">New Loan</option>
-                    <option value="home">Balance Transfer</option>
+                <input type="text" name="registration_number" class="form-control" placeholder="Vehicle Registration Number (e.g., MH12AB1234)" required>
+            </div>
+
+            <!-- Insurance Type -->
+            <div class="form-group">
+                <select name="insurance_type" class="form-select" required>
+                    <option value="">-- Select Insurance Type --</option>
+                    <option value="comprehensive">Comprehensive</option>
+                    <option value="third_party">Third-Party Only</option>
                 </select>
             </div>
 
-            <!-- Conditional Fields for Balance Transfer -->
-            <div id="balance-transfer-fields" style="display: none;">
-                <!-- Bank Name -->
-                <div class="form-group">
-                    <input type="text" name="bank_name" class="form-control" placeholder="Bank Name">
-                </div>
+            <!-- Policy Duration -->
+            <!-- <div class="form-group">
+                <select name="policy_duration" class="form-select" required>
+                    <option value="">-- Select Policy Duration --</option>
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="more">More than 3 Years</option>
+                </select>
+            </div> -->
 
-                <!-- Outstanding Amount -->
-                <div class="form-group">
-                    <!-- Outstanding Amount in Numbers -->
-<input type="number" id="outstandingAmountNumber" name="outstanding_amount" class="form-control" placeholder="Outstanding Amount" required>
-
-<!-- Outstanding Amount in Words (readonly or disabled) -->
-<input type="text" id="outstandingAmountWords" name="outstanding_amount_words" class="form-control" placeholder="Outstanding Amount (in words)" readonly>
-
-                </div>
-
-				
+            <!-- City / State -->
+            <div class="form-group">
+                <input type="text" name="location" class="form-control" placeholder="City / State" required>
             </div>
 
             <!-- Submit Button -->
@@ -543,6 +544,7 @@ Protect Your<br />Ride with<br />Car Coverage                    </rs-layer>
         </form>
     </div>
 </div>
+
 
 </section>
 
@@ -656,7 +658,7 @@ Protect Your<br />Ride with<br />Car Coverage                    </rs-layer>
 				  <option>Car Loan</option>
 				  <option>Personal Loan</option>
 				  <option>Business Loan</option>
-				  <option>Commercial Loan</option>
+				  <option>Commercial Vehicle Loan</option>
 				  <option>Credit Card</option>
                     <option>Car Insurance</option>
 				  <option>Health Insurance</option>
